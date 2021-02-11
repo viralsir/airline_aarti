@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>details</title>
+</head>
+<body>
+    <h1> Flight Info</h1>
+    <ul>
+        <li>
+            id : {{ flight_info.id }}
+        </li>
+         <li>   Origin : {{ flight_info.origin }}
+         </li>
+          <li>destination : {{ flight_info.destination }}
+          </li>
+          <li>duration : {{ flight_info.duration }}
+
+        </li>
+    </ul>
+ <a href="{% url 'home' %}"> Home </a>
+</body>
+</html>

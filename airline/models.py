@@ -15,3 +15,13 @@ class flight(models.Model):
 
     def __str__(self):
         return f"flight({self.origin} to {self.destination})"
+
+
+class passenger(models.Model):
+    first_name=models.CharField(max_length=45)
+    last_name=models.CharField(max_length=45)
+    flights=models.ManyToManyField(flight,related_name="passenger",blank=True)
+
+
+    def __str__(self):
+        return f"{self.first_name} - {self.last_name}"
