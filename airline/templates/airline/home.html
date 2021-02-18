@@ -8,7 +8,7 @@
 <body>
     <h1> flight list </h1>
     <ul>
-            {% for flight in flights %}
+         {%for flight in flights %}
                 <li>
                     <a href="{% url 'flight_details' flight.id %} ">
                         {{  flight }}
