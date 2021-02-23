@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 # ORM  : OBEJCT RELATIONAL MAPPING
 # Create your models here.
 class course_info(models.Model):
@@ -11,3 +12,6 @@ class course_info(models.Model):
     #member function
     def __str__(self):
         return f"{self.name}"
+
+    def get_absolute_url(self):
+        return  reverse('insert')
