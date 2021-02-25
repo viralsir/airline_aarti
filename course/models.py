@@ -14,4 +14,4 @@ class course_info(models.Model):
         return f"{self.name}"
 
     def get_absolute_url(self):
-        return  reverse('insert')
+        return  reverse('view')

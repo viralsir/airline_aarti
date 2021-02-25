@@ -1,13 +1,22 @@
 from django.shortcuts import render,redirect
 from .models import course_info
 from .forms import InserForm
-from django.views.generic import CreateView
+from django.views.generic import CreateView,ListView,UpdateView
 
 
 class NewCourse(CreateView):
     model = course_info
     fields = '__all__'
     template_name = 'course/insert.html'
+
+class ListCourse(ListView):
+    model = course_info
+    context_object_name = 'courses'
+
+class UpdateCourse(UpdateView):
+    model = course_info
+    fields = '__all__'
+    template_name = "course/insert.html"
 
 # <modelname>_form.html
 # course_info_form.html
