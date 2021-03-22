@@ -3,6 +3,7 @@
     <table id="example">
         <thead>
             <tr>
+                <th> Id</th>
                 <th> Course Name </th>
                 <th> Course duration</th>
                 <th> Course Fees </th>
@@ -13,11 +14,17 @@
         <tbody>
                 {% for course in courses %}
                     <tr>
+                        <td> {{ course.id }}</td>
                         <td> {{ course.name }}</td>
                         <td> {{ course.duration }}</td>
                         <td> {{ course.fees }}</td>
                         <td>
                             <a href="{% url 'update' course.id %}">Update</a>
+                            &nbsp;&nbsp;&nbsp;
+                            <a href="{% url 'delete' course.id %}">Delete</a>
+                             &nbsp;&nbsp;&nbsp;
+                            <a href="{% url 'detail' course.id %}">View More</a>
+
                         </td>
                     </tr>
                 {% endfor %}

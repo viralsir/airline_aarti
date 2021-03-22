@@ -1,0 +1,12 @@
+{%  extends "course/layout.html" %}
+{% block body %}
+    <h1>
+        <form method="post">
+            {% csrf_token %}
+            Are you sure you want to Delete {{ object.name }} ?
+
+            <input type="submit" value="delete">
+
+        </form>
+    </h1>
+{% endblock %}
